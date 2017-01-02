@@ -3,16 +3,16 @@
 <suite name="TestParallel"  thread-count="4" parallel="tests">
 
     <test name = "ChromeTest">
-    <parameter name="browser" value="chrome" />
+    <parameter name="browser" value="${browser1}" />
         <classes>
             <class name="com.query.maven.ClassOne"/>
-             <class name="com.query.maven.ClassTwo"/>
+            <class name="com.query.maven.ClassTwo"/>
         
         </classes>
     </test>
     
     <test name = "FirefoxTest">
-    <parameter name="browser" value="firefox" />
+    <parameter name="browser" value="${browser2}" />
         <classes>
            <class name="com.query.maven.ClassOne"/>
            <class name="com.query.maven.ClassTwo"/>

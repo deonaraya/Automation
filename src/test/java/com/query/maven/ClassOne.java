@@ -16,7 +16,6 @@ public class ClassOne {
 	@Parameters("browser")
 	@BeforeClass
 	public void setUp(String browser){
-		
 		 if(browser.equalsIgnoreCase("firefox"))
 	            driver = new FirefoxDriver();
 	         else  if(browser.equalsIgnoreCase("chrome"))
@@ -24,9 +23,6 @@ public class ClassOne {
 	        else {
 	            throw new IllegalArgumentException("Invalid browser value!!");
 	        }
-		
-		
-	driver = new FirefoxDriver();		
 	}
 	
 	@Test
