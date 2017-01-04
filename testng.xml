@@ -7,7 +7,6 @@
         <classes>
             <class name="com.query.maven.ClassOne"/>
             <class name="com.query.maven.ClassTwo"/>
-        
         </classes>
     </test>
     

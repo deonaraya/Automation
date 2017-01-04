@@ -8,22 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class ClassTwo {
-	
-	WebDriver driver; 
-	
-	@Parameters("browser")
-	@BeforeClass
-	public void setUp(String browser){
-		
-		 if(browser.equalsIgnoreCase("firefox"))
-	            driver = new FirefoxDriver();
-	         else  if(browser.equalsIgnoreCase("chrome"))
-	            driver = new ChromeDriver();
-	        else {
-	            throw new IllegalArgumentException("Invalid browser value!!");
-	        }		
-	}
+public class ClassTwo extends BaseTest {
 	
 	@Test
 	public void yahooLoad(){
@@ -46,11 +31,6 @@ public class ClassTwo {
                 + " with Thread Id:- " + Thread.currentThread().getId());
 		}
 	
-	
-	@AfterClass
-	public void tearDown(){
-		driver.quit();
-	}
 	
 
 
