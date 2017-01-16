@@ -1,17 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="TestParallel"  thread-count="4" parallel="tests">
-
-    <test name = "ChromeTest">
-    <parameter name="browser" value="${browser1}" />
+<suite name="TestParallel"  thread-count="10" parallel="tests">
+    <test name = "ChromeTest" parallel = "methods">
+    <parameter name="browserName" value="chrome" />
         <classes>
             <class name="com.query.maven.ClassOne"/>
             <class name="com.query.maven.ClassTwo"/>
         </classes>
     </test>
     
-    <test name = "FirefoxTest">
-    <parameter name="browser" value="${browser2}" />
+    <test name = "FirefoxTest" parallel="methods">
+    <parameter name="browserName" value="firefox" />
         <classes>
            <class name="com.query.maven.ClassOne"/>
            <class name="com.query.maven.ClassTwo"/>
